@@ -16,10 +16,18 @@ class Home(ListView):
         return context
 
 # 회원가입 페이지
-#class SignUp():
+def signup(request):
+    return render(
+        request, 
+        'bbs/signup.html'
+    )
 
 # 로그인 페이지
-#class LogIn():
+def login(request):
+    return render(
+        request,
+        'bbs/login.html'
+    )
 
 # 게시글 조회 페이지
 class PostView(DetailView):
