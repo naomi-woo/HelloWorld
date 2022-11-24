@@ -30,11 +30,11 @@ def login(request):
     )
 
 # 게시글 조회 페이지
-class PostView(DetailView):
+class PostDetail(DetailView):
     model = Post
 
     def get_context_date(self, **kwargs):
-        context = super(PostView,self).get_context_data()
+        context = super(PostDetail,self).get_context_data()
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count
         return context
