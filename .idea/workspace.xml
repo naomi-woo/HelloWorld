@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8f4427a-cae4-418f-a0c5-9613baa1aa9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my_page/static/image/user.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bbs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bbs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_page/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_page/templates/my_page/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/templates/my_page/mypage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_page/templates/my_page/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/templates/my_page/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,5 +65,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_page/models.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

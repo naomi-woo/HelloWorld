@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def mypage(request):
     return render(
@@ -12,4 +13,4 @@ def profile(request):
         request,
         'my_page/profile.html'
     )
-    
+
