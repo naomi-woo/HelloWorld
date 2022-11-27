@@ -8,6 +8,7 @@ class User(models.Model):
     PW = models.CharField(max_length=25, unique=True)
     join_date = models.DateTimeField(auto_now_add=True)
 
+
     # null=True 인 field
     email = models.EmailField(max_length=25, unique=True, null=True, blank=True)
     phone_number = models.CharField(max_length=25, unique=True, null=True, blank=True)
