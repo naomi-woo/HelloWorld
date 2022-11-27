@@ -10,6 +10,6 @@ urlpatterns = [
     # IP주소/bbs/category/slug/
     path('category/<str:slug>/', views.category_list),
     
-    path('signup/', views.signup),
+    path('login/signup/', views.signup),
     path('login/', views.login),
 ]
