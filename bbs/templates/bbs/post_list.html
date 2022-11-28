@@ -105,14 +105,12 @@
                         <a class="btn btn-outline-primary float-right" href="{{p.get_absolute_url}}">
                             글보러 가기 <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <p>by {{ p.writer}}&nbsp;&nbsp;&nbsp;</p>
-                        <div class="small text-muted">{{p.created_date | date:"Y-m-d h:m:s"}}</div>
+                        <p>by {{ p.writer.ID}}&nbsp;&nbsp;&nbsp;</p>
+                        <div class="small text-muted">{{p.created_date | date:"y년m월d일 h시m분"}}</div>
                     </div>
                 </div>
             </div>
             {% endfor %}
-        {% else %}
-            <h5>아직 게시물이 없습니다.</h5>
         {% endif %}
     </div>
 
