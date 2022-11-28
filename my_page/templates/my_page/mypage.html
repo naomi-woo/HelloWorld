@@ -90,10 +90,17 @@
 </svg> 작성한 게시글 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성 날짜 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수정&nbsp;삭제
 </div>
 <hr>
-<div>
-&nbsp; &nbsp; &nbsp; 게시글1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022.11.20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button type="button" class="btn btn-primary btn-sm">수정</button><button type="button" class="btn btn-primary btn-sm">삭제</button>
+
+<div  style="margin-left:20px">
+    게시글1 {{ user.title }}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    2022.11.20 {{user.postdate}}
+
+<button type="button" class="btn btn-primary btn-sm"  style="margin-left:60px">수정</button><button type="button" class="btn btn-primary btn-sm">삭제</button>
+
 </div>
+
+
+
 <hr>
 
 <!--
