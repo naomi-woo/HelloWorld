@@ -5,15 +5,17 @@ from django.core.exceptions import PermissionDenied
 
 # Create your views here.
 # 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
-class Home(ListView):
+class PostList(ListView):
     model = Post
     ordering = '-pk'
 
-    def get_context_date(self, *, object_list=None, **kwargs):
-        context = super(Home,self).get_context_data()
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PostList,self).get_context_data()
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count
         return context
+    # 템플릿은 모델명_list.html : post_list.html
+    # 매개변수 모델명_list : post_list
 
 # 회원가입 페이지
 def signup(request):
