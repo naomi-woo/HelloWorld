@@ -1,22 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import User, Post, Comment, Category
-from django.core.exceptions import PermissionDenied 
+from .forms import CommentForm
 
 # Create your views here.
-# 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
-class PostList(ListView):
-    model = Post
-    ordering = '-pk'
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(PostList,self).get_context_data()
-        context['categories'] = Category.objects.all()
-        context['no_category_post_count'] = Post.objects.filter(category=None).count
-        return context
-    # 템플릿은 모델명_list.html : post_list.html
-    # 매개변수 모델명_list : post_list
-
 # 회원가입 페이지
 def signup(request):
     return render(
@@ -35,22 +22,41 @@ def login(request):
 class PostDetail(DetailView):
     model = Post
 
-    def get_context_date(self, **kwargs):
+    def get_context_data(self, **kwargs):
         context = super(PostDetail,self).get_context_data()
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count
+        context['comment_form'] = CommentForm
         return context
+    # 템플릿은 모델명_detail.html : post_detail.html
+    # 매개변수 모델명 : post
 
 # 게시글 작성 페이지
-class PostWrite(CreateView):
+class PostCreate(CreateView):
     model = Post
     fields = ['title', 'category', 'content', 'file']
-    
-    def get_context_date(self, *, object_list=None, **kwargs):
-        context = super(PostWrite,self).get_context_data()
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PostCreate,self).get_context_data()
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count
         return context
+    # 모델명_form.html
+
+
+
+# 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
+class PostList(ListView):
+    model = Post
+    ordering = '-pk'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PostList,self).get_context_data()
+        context['categories'] = Category.objects.all()
+        context['no_category_post_count'] = Post.objects.filter(category=None).count
+        return context
+    # 템플릿은 모델명_list.html : post_list.html
+    # 매개변수 모델명_list : post_list
 
 # 카테고리별 Post 목록 출력 페이지
 def category_list(request, slug):
