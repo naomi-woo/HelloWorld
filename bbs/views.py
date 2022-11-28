@@ -43,12 +43,11 @@ class PostCreate(CreateView):
         return context
     # 모델명_form.html
 
-
-
 # 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
 class PostList(ListView):
     model = Post
     ordering = '-pk'
+    paginate_by = 3
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(PostList,self).get_context_data()
@@ -57,6 +56,8 @@ class PostList(ListView):
         return context
     # 템플릿은 모델명_list.html : post_list.html
     # 매개변수 모델명_list : post_list
+
+
 
 # 카테고리별 Post 목록 출력 페이지
 def category_list(request, slug):
