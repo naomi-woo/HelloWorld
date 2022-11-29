@@ -1,22 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView
-from .models import User, Post, Comment, Category
+from .models import Post, Comment, Category
 from .forms import CommentForm
 
 # Create your views here.
-# 회원가입 페이지
-def signup(request):
-    return render(
-        request, 
-        'bbs/signup.html'
-    )
+# 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
+class PostList(ListView):
+    model = Post
+    ordering = '-pk'
+    paginate_by = 3
 
-# 로그인 페이지
-def login(request):
-    return render(
-        request,
-        'bbs/login.html'
-    )
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PostList,self).get_context_data()
+        context['categories'] = Category.objects.all()
+        context['no_category_post_count'] = Post.objects.filter(category=None).count
+        return context
+    # 템플릿은 모델명_list.html : post_list.html
+    # 매개변수 모델명_list : post_list
 
 # 게시글 조회 페이지
 class PostDetail(DetailView):
@@ -36,6 +36,11 @@ class PostCreate(CreateView):
     model = Post
     fields = ['title', 'category', 'content', 'file']
 
+    def form_valid(self,form):
+        current_user =  self.request.user
+        if current_user.is_authenticated:
+            return redirect('/bbs/')
+
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(PostCreate,self).get_context_data()
         context['categories'] = Category.objects.all()
@@ -43,31 +48,18 @@ class PostCreate(CreateView):
         return context
     # 모델명_form.html
 
-# 대문 페이지, 카테고리 별 최신 Post 목록 출력 페이지
-class PostList(ListView):
-    model = Post
-    ordering = '-pk'
-    paginate_by = 3
+# 로그인 페이지
+def login(request):
+    return render(
+        request,
+        'bbs/login.html'
+    )
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(PostList,self).get_context_data()
-        context['categories'] = Category.objects.all()
-        context['no_category_post_count'] = Post.objects.filter(category=None).count
-        return context
-    # 템플릿은 모델명_list.html : post_list.html
-    # 매개변수 모델명_list : post_list
-
-
+# 회원가입 페이지
+def signup(request):
+    return render(
+        request, 
+        'bbs/signup.html'
+    )
 
 # 카테고리별 Post 목록 출력 페이지
-def category_list(request, slug):
-    if slug == 'no_category':
-        category = '미분류'
-    else :
-        category = Category.objects.get(slug=slug)
-    return render(request, 'blog/category_list.html', {
-        'category' : category,
-        'categories' : Category.objects.all(),
-        'no_category_post_count' : Post.objects.filter(category=None).count,
-    })
-    
