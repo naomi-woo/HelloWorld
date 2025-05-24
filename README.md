@@ -125,5 +125,5 @@ Plans for further development include:
 
 ## 📫 Contact
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/naominomads/) for any inquiries or collaborations.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/naomi-woo-profile/) for any inquiries or collaborations.
 
