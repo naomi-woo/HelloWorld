@@ -112,4 +112,5 @@ Plans for further development include:
 
 ## 📫 Contact
 
-**LinkedIn:** [linkedin.com/in/naominomads](https://www.linkedin.com/in/naomi-woo-profile/)
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/naominomads/) for any inquiries or collaborations.
+
