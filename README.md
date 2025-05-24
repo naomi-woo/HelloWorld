@@ -49,40 +49,43 @@ While many students rely on scattered resources during their CE studies, **Hello
 
 Here’s a glimpse into the main features and interface of **HelloWorld!** — from user registration and login to posting, commenting, and profile management. The UI is kept minimal and intuitive for ease of use.
 
+<br/>
+<br/>
+
 <p align="center">
   <img src="./images/landing.png" alt="Landing Page" width="600"/><br/>
   <em>Main landing page</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/create-post.png" alt="Create Post" width="600"/><br/>
   <em>Create a new post with file upload</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/create-comment.png" alt="Comment Section on Post" width="600"/><br/>
   <em>Comment section below a post</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/signup.png" alt="Sign-up Page" width="600"/><br/>
   <em>User registration page</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/login.png" alt="Login Page" width="600"/><br/>
   <em>Login page</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/profile.png" alt="Edit Profile" width="600"/><br/>
   <em>Profile editing screen</em>
-</p>
+</p><br/>
 
 <p align="center">
   <img src="./images/mypage.png" alt="My Page Dashboard" width="600"/><br/>
   <em>User dashboard with post management</em>
-</p>
+</p><br/>
 
 
 <br/>
