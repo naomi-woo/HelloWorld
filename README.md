@@ -35,6 +35,17 @@ While many students rely on scattered resources during their CE studies, **Hello
 
 <br/>
 
+### Architecture Diagram
+
+The diagram below shows the overall system architecture of the HelloWorld platform, illustrating how user actions flow through the front-end, back-end, and database components.
+
+
+<p align="center">
+  <img src="./images/architecture.png" alt="System Architecture of HelloWorld project" width="600"/>
+</p>
+
+<br/>
+
 ## 💡 4. Core Features
 
 - 📄 **Post Creation**: Write and share study notes or code insights  
