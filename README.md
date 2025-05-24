@@ -23,7 +23,20 @@ While many students rely on scattered resources during their CE studies, **Hello
 
 <br/>
 
-## ⚙️ 3. Tech Stack
+## ⚙️ 3. Architecture & Tech Stack
+
+### Architecture
+
+The diagram below shows the overall system architecture of the HelloWorld platform, illustrating how user actions flow through the front-end, back-end, and database components.
+
+
+<p align="center">
+  <img src="./images/architecture.png" alt="System Architecture of HelloWorld project" width="600"/>
+</p>
+
+<br/>
+
+### Tech Stack
 
 | Category        | Tools & Frameworks                             |
 |----------------|--------------------------------------------------|
@@ -32,17 +45,6 @@ While many students rely on scattered resources during their CE studies, **Hello
 | **Database**    | SQLite                                          |
 | **Development** | VS Code, PyCharm                               |
 | **Docs**        | Google Docs                                     |
-
-<br/>
-
-### Architecture Diagram
-
-The diagram below shows the overall system architecture of the HelloWorld platform, illustrating how user actions flow through the front-end, back-end, and database components.
-
-
-<p align="center">
-  <img src="./images/architecture.png" alt="System Architecture of HelloWorld project" width="600"/>
-</p>
 
 <br/>
 
